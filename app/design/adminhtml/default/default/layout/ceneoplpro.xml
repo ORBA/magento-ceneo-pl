@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_ceneoplpro_offer_index>
+        <reference name="menu">
+            <action method="setActive"><menupath>catalog/ceneoplpro</menupath></action>
+        </reference>
+        <reference name="content">
+            <block type="ceneoplpro/admin_offer" name="ceneoplpro_offer">
+                <block type="adminhtml/store_switcher" name="store_switcher" as="store_switcher">
+                    <action method="setUseConfirm"><params>0</params></action>
+                </block>
+            </block>
+        </reference>
+    </adminhtml_ceneoplpro_offer_index>
+    <adminhtml_ceneoplpro_offer_urls>
+        <reference name="content">
+            <block type="ceneoplpro/admin_offer_urls" name="offer_urls" />
+        </reference>
+    </adminhtml_ceneoplpro_offer_urls>
+    <adminhtml_ceneoplpro_mapping_index>
+        <reference name="menu">
+            <action method="setActive"><menupath>catalog/ceneoplpro</menupath></action>
+        </reference>
+        <reference name="content">
+            <block type="ceneoplpro/adminhtml_mapping" name="ceneoplpro_mapping" />
+        </reference>
+    </adminhtml_ceneoplpro_mapping_index>
+    <adminhtml_ceneoplpro_mapping_edit>
+        <reference name="content">
+            <block type="ceneoplpro/adminhtml_mapping_edit" name="mapping_edit" />
+        </reference>
+        <reference name="left">
+            <block type="ceneoplpro/adminhtml_mapping_edit_tabs" name="mapping_tabs"/>
+        </reference>
+    </adminhtml_ceneoplpro_mapping_edit>
+    <adminhtml_ceneoplpro_mapping_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="ceneoplpro/adminhtml_mapping_grid" name="mapping_grid"/>
+        </block>
+    </adminhtml_ceneoplpro_mapping_grid>
+</layout>

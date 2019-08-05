@@ -1,0 +1,12 @@
+<?php if($this->isCpaActive()) : ?>
+    <script type="text/javascript"><!--
+        ceneo_client_email = ‘<?php echo $this->getClientEmail(); ?>’;
+        ceneo_order_id = ‘<?php echo $this->getOrderID(); ?>’;
+        ceneo_amount = <?php echo $this->getAmount(); ?>;
+        ceneo_shop_product_ids =‘#<?php echo $this->getFormattedProductsIdsForCpa(); ?>’;
+        //-->
+    </script>
+    <script type="text/javascript" src="https://ssl.ceneo.pl/transactions/track/v2/script.js?accountGuid=<?php echo $this->getCeneoGUID(); ?>">
+    </script>
+
+<?php endif; ?>

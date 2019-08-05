@@ -1,0 +1,1146 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <ceneoplpro translate="label" module="ceneoplpro">
+            <label>ORBA | Ceneo.pl Pro</label>
+            <tab>catalog</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>200</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <config translate="label">
+                    <label>Configuration</label>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <hash translate="label,comment">
+                            <label>Unique Hash</label>
+                            <frontend_type>text</frontend_type>
+                            <comment>This value is used for the feeds URLs generation</comment>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </hash>
+                        <live translate="label,comment">
+                            <label>Live feed generation</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <comment>If "Yes" XML feed will be regenerated on each URL access. If "No" it will be get from cache.</comment>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </live>
+                        <use_ids translate="label">
+                            <label>Use IDs instead of SKUs in feed</label>
+                            <comment>Ceneo will not accept some SKUs, eg. with spaces</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </use_ids>
+                        <export_also_products_without_categories translate="label">
+                            <label>Export products without categories</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </export_also_products_without_categories>
+                        <export_out_of_stock_products translate="label">
+                            <label>Export out of stock products</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </export_out_of_stock_products>
+                        <export_configurable_products translate="label,comment">
+                            <label>Export configurable products</label>
+                            <comment>If 'Yes' then Configurable Products will be in the XML feed. If 'No', then Configurable Products will not appear but Associated Product instead will be in the XML feed.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </export_configurable_products>
+                        <xml_show_avail>
+                            <label>Show availability in XML feed</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xml_show_avail>
+                        <xml_show_set>
+                            <label>Show if product is set in XML feed</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xml_show_set>
+                        <xml_show_weight>
+                            <label>Show weight in XML feed</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xml_show_weight>
+                        <xml_show_basket>
+                            <label>Show if product is available for Buy in Ceneo in XML feed</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xml_show_basket>
+                        <xml_show_stock>
+                            <label>Show stock in XML feed</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </xml_show_stock>
+                        <watermark translate="label">
+                            <label>Watermark on product images</label>
+                            <comment>Enabling this option may lessen the efficiency of the module</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </watermark>
+                        <image_option translate="label">
+                            <label>Image type</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute_image</source_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <watermark>1</watermark>
+                            </depends>
+                        </image_option>
+                        <image_size translate="label">
+                            <label>Image size</label>
+                            <comment>Specify image size in pixels (min 200, max 2000)</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <validate>validate-digits validate-digits-range digits-range-200-2000</validate>
+                            <depends>
+                                <watermark>1</watermark>
+                            </depends>
+                        </image_size>
+                    </fields>
+                </config>
+                <attr_core translate="label">
+                    <label>Mapping of the core attributes</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <avail_1_name translate="label">
+                            <label>Product is available when</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </avail_1_name>
+                        <avail_1_value translate="label">
+                            <label>equals</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </avail_1_value>
+                        <avail_3_name translate="label">
+                            <label>Product will be available in 3 days when</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </avail_3_name>
+                        <avail_3_value translate="label">
+                            <label>equals</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </avail_3_value>
+                        <avail_7_name translate="label">
+                            <label>Product will be available in a week when</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </avail_7_name>
+                        <avail_7_value translate="label">
+                            <label>equals</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </avail_7_value>
+                        <avail_14_name translate="label">
+                            <label>Product will be available in more than week when</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </avail_14_name>
+                        <avail_14_value translate="label">
+                            <label>equals</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </avail_14_value>
+                        <set_name translate="label">
+                            <label>Product is a set when</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </set_name>
+                        <set_value translate="label">
+                            <label>equals</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </set_value>
+                        <basket_name translate="label">
+                            <label>Product is available for Buy in Ceneo when</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </basket_name>
+                        <basket_value translate="label">
+                            <label>equals</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </basket_value>
+                        <description translate="label">
+                            <label>Description attribute</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </description>
+                    </fields>
+                </attr_core>
+                <attr_cpa translate="label">
+                    <label>Transactional system CPA</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <cpa_active translate="label">
+                            <label>CPA active</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cpa_active>
+                        <cpa_guid translate="label">
+                            <label>GUID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cpa_guid>
+                    </fields>
+                </attr_cpa>
+                <attr_other translate="label">
+                    <label>Mapping of the attributes for "Other" group</label>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <dynamic translate="label,comment">
+                            <label>Additional Attributes</label>
+                            <sort_order>100</sort_order>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                            <show_in_default>1</show_in_default>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <frontend_model>ceneoplpro/config_map</frontend_model>
+                        </dynamic>
+                        <Producent translate="label,comment">
+                            <label>Producent</label>
+                            <comment>Producent danego produktu</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Producent>
+                        <Kod_producenta translate="label,comment">
+                            <label>Kod_producenta</label>
+                            <comment>Kod nadawany przez producenta</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Kod_producenta>
+                        <EAN translate="label,comment">
+                            <label>EAN</label>
+                            <comment>Kod paskowy występujący na produktach, opakowaniach</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </EAN>
+                        <Pojemnosc translate="label,comment">
+                            <label>Pojemnosc</label>
+                            <comment>Pojemność podana w mililitrach np. 50 ml, 100 ml</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Pojemnosc>
+                    </fields>
+                </attr_other>
+                <attr_books translate="label">
+                    <label>Mapping of the attributes for "Books" group</label>
+                    <sort_order>30</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <dynamic translate="label,comment">
+                            <label>Additional Attributes</label>
+                            <sort_order>100</sort_order>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                            <show_in_default>1</show_in_default>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <frontend_model>ceneoplpro/config_map</frontend_model>
+                        </dynamic>
+                        <Autor translate="label,comment">
+                            <label>Autor</label>
+                            <comment>Imię i nazwisko autora</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Autor>
+                        <ISBN translate="label,comment">
+                            <label>ISBN</label>
+                            <comment>Kod ISBN nadawany książkom</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </ISBN>
+                        <Ilosc_stron translate="label,comment">
+                            <label>Ilosc_stron</label>
+                            <comment>Informacja na temat liczby stron</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Ilosc_stron>
+                        <Wydawnictwo translate="label,comment">
+                            <label>Wydawnictwo</label>
+                            <comment>Nazwa wydawnictwa</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Wydawnictwo>
+                        <Rok_wydania translate="label,comment">
+                            <label>Rok_wydania</label>
+                            <comment>Rok publikacji książki</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Rok_wydania>
+                        <Oprawa translate="label,comment">
+                            <label>Oprawa</label>
+                            <comment>Rodzaj oprawy np., miękka, twarda</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Oprawa>
+                        <Format translate="label,comment">
+                            <label>Format</label>
+                            <comment>Wymiary książki np. B5, A5, 172x245cm, 15.5x22.5cm</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Format>
+                    </fields>
+                </attr_books>
+                <attr_tires translate="label">
+                    <label>Mapping of the attributes for "Tires" group</label>
+                    <sort_order>40</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <dynamic translate="label,comment">
+                            <label>Additional Attributes</label>
+                            <sort_order>100</sort_order>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                            <show_in_default>1</show_in_default>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <frontend_model>ceneoplpro/config_map</frontend_model>
+                        </dynamic>
+                        <Producent translate="label,comment">
+                            <label>Producent</label>
+                            <comment>Producent opony</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Producent>
+                        <SAP translate="label,comment">
+                            <label>SAP</label>
+                            <comment>Kod producenta</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </SAP>
+                        <EAN translate="label,comment">
+                            <label>EAN</label>
+                            <comment>Kod paskowy występujący na produktach, opakowaniach</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </EAN>
+                        <Model translate="label,comment">
+                            <label>Model</label>
+                            <comment>Model opony</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Model>
+                        <Szerokosc_opony translate="label,comment">
+                            <label>Szerokosc_opony</label>
+                            <comment>Szerokość opony w milimetrach</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Szerokosc_opony>
+                        <Profil translate="label,comment">
+                            <label>Profil</label>
+                            <comment>Profil opony</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Profil>
+                        <Srednica_kola translate="label,comment">
+                            <label>Srednica_kola</label>
+                            <comment>Średnica osadzenia podana w calach</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Srednica_kola>
+                        <Indeks_predkosc translate="label,comment">
+                            <label>Indeks_predkosc</label>
+                            <comment>Indeks dopuszczalnej prędkości</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Indeks_predkosc>
+                        <Indeks_nosnosc translate="label,comment">
+                            <label>Indeks_nosnosc</label>
+                            <comment>Maksymalne obciążenie w funtach</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Indeks_nosnosc>
+                        <Sezon translate="label,comment">
+                            <label>Sezon</label>
+                            <comment>Sezonowość np. Zimowe, Letnie, Całoroczne</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Sezon>
+                    </fields>
+                </attr_tires>
+                <attr_rims translate="label">
+                    <label>Mapping of the attributes for "Rims" group</label>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <dynamic translate="label,comment">
+                            <label>Additional Attributes</label>
+                            <sort_order>100</sort_order>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                            <show_in_default>1</show_in_default>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <frontend_model>ceneoplpro/config_map</frontend_model>
+                        </dynamic>
+                        <Producent translate="label,comment">
+                            <label>Producent</label>
+                            <comment>Producent felgi/kołpaków</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Producent>
+                        <Kod_producenta translate="label,comment">
+                            <label>Kod_producenta</label>
+                            <comment>Kod nadawany przez producenta</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Kod_producenta>
+                        <EAN translate="label,comment">
+                            <label>EAN</label>
+                            <comment>Kod paskowy występujący na produktach, opakowaniach</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </EAN>
+                        <Rozmiar translate="label,comment">
+                            <label>Rozmiar</label>
+                            <comment>Szerokość i zewnętrzna średnica w calach np. 6,5x15</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Rozmiar>
+                        <Rozstaw_srub translate="label,comment">
+                            <label>Rozstaw_srub</label>
+                            <comment>Liczba śrub mocujących i średnica okręgu na której znajdują się otwory np. 5x110</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Rozstaw_srub>
+                        <Odsadzenie translate="label,comment">
+                            <label>Odsadzenie</label>
+                            <comment>(tylko dla felg) Odległości między płaszczyzną montażową obręczy, a jej środkiem symetrii (ET)</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Odsadzenie>
+                    </fields>
+                </attr_rims>
+                <attr_perfumes translate="label">
+                    <label>Mapping of the attributes for "Perfumes" group</label>
+                    <sort_order>60</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <dynamic translate="label,comment">
+                            <label>Additional Attributes</label>
+                            <sort_order>100</sort_order>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                            <show_in_default>1</show_in_default>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <frontend_model>ceneoplpro/config_map</frontend_model>
+                        </dynamic>
+                        <Producent translate="label,comment">
+                            <label>Producent</label>
+                            <comment>Producent felgi/kołpaków</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Producent>
+                        <Kod_producenta translate="label,comment">
+                            <label>Kod_producenta</label>
+                            <comment>Kod nadawany przez producenta</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Kod_producenta>
+                        <EAN translate="label,comment">
+                            <label>EAN</label>
+                            <comment>Kod paskowy występujący na produktach, opakowaniach</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </EAN>
+                        <Linia translate="label,comment">
+                            <label>Linia</label>
+                            <comment>Linia zapachu – seria np. Miss Pucci, Orange Celebration of Happiness</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Linia>
+                        <Rodzaj translate="label,comment">
+                            <label>Rodzaj</label>
+                            <comment>Rodzaj produktu np. Woda perfumowana, Woda toaletowa, Woda kolońska, Dezodorant roll on, Dezodorant sztyft</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Rodzaj>
+                        <Pojemnosc translate="label,comment">
+                            <label>Pojemnosc</label>
+                            <comment>Pojemność podana w mililitrach np. 50 ml, 100 ml</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Pojemnosc>
+                    </fields>
+                </attr_perfumes>
+                <attr_music translate="label">
+                    <label>Mapping of the attributes for "Music" group</label>
+                    <sort_order>70</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <dynamic translate="label,comment">
+                            <label>Additional Attributes</label>
+                            <sort_order>100</sort_order>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                            <show_in_default>1</show_in_default>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <frontend_model>ceneoplpro/config_map</frontend_model>
+                        </dynamic>
+                        <Wykonawca translate="label,comment">
+                            <label>Wykonawca</label>
+                            <comment>Imię i nazwisko wykonawcy lub nazwa zespołu</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Wykonawca>
+                        <EAN translate="label,comment">
+                            <label>EAN</label>
+                            <comment>Kod kreskowy EAN</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </EAN>
+                        <Nosnik translate="label,comment">
+                            <label>Nosnik</label>
+                            <comment>Rodzaj nośnika np. DVD, CD</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Nosnik>
+                        <Wytwornia translate="label,comment">
+                            <label>Wytwornia</label>
+                            <comment>Nazwa wytwórni muzycznej</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Wytwornia>
+                        <Gatunek translate="label,comment">
+                            <label>Gatunek</label>
+                            <comment>Gatunek muzyczny</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Gatunek>
+                    </fields>
+                </attr_music>
+                <attr_games translate="label">
+                    <label>Mapping of the attributes for "Games" group</label>
+                    <sort_order>80</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <dynamic translate="label,comment">
+                            <label>Additional Attributes</label>
+                            <sort_order>100</sort_order>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                            <show_in_default>1</show_in_default>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <frontend_model>ceneoplpro/config_map</frontend_model>
+                        </dynamic>
+                        <Producent translate="label,comment">
+                            <label>Producent</label>
+                            <comment>Producent gry</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Producent>
+                        <Kod_producenta translate="label,comment">
+                            <label>Kod_producenta</label>
+                            <comment>Kod nadawany przez producenta</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Kod_producenta>
+                        <EAN translate="label,comment">
+                            <label>EAN</label>
+                            <comment>Kod kreskowy EAN</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </EAN>
+                        <Platforma translate="label,comment">
+                            <label>Platforma</label>
+                            <comment>Platforma na jaką jest przeznaczona gra np. PC, PS2, Xbox360</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Platforma>
+                        <Gatunek translate="label,comment">
+                            <label>Gatunek</label>
+                            <comment>Gatunek gry np. Akcji, Wyścigi</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Gatunek>
+                    </fields>
+                </attr_games>
+                <attr_movies translate="label">
+                    <label>Mapping of the attributes for "Movies" group</label>
+                    <sort_order>90</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <dynamic translate="label,comment">
+                            <label>Additional Attributes</label>
+                            <sort_order>100</sort_order>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                            <show_in_default>1</show_in_default>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <frontend_model>ceneoplpro/config_map</frontend_model>
+                        </dynamic>
+                        <Rezyser translate="label,comment">
+                            <label>Rezyser</label>
+                            <comment>Imię i nazwisko reżysera filmu</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Rezyser>
+                        <EAN translate="label,comment">
+                            <label>EAN</label>
+                            <comment>Kod paskowy występujący na produktach, opakowaniach</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </EAN>
+                        <Nosnik translate="label,comment">
+                            <label>Nosnik</label>
+                            <comment>Rodzaj nośnika np. DVD, VCD, Blu-Ray</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Nosnik>
+                        <Wytwornia translate="label,comment">
+                            <label>Wytwornia</label>
+                            <comment>Nazwa wytwórni filmowej</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Wytwornia>
+                        <Obsada translate="label,comment">
+                            <label>Obsada</label>
+                            <comment>Aktorzy grający w danym filmie</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Obsada>
+                        <Tytul_oryginalny translate="label,comment">
+                            <label>Tytul_oryginalny</label>
+                            <comment>Oryginalny tytuł filmu</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Tytul_oryginalny>
+                    </fields>
+                </attr_movies>
+                <attr_medicines translate="label">
+                    <label>Mapping of the attributes for "Medicines" group</label>
+                    <sort_order>100</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <dynamic translate="label,comment">
+                            <label>Additional Attributes</label>
+                            <sort_order>100</sort_order>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                            <show_in_default>1</show_in_default>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <frontend_model>ceneoplpro/config_map</frontend_model>
+                        </dynamic>
+                        <Producent translate="label,comment">
+                            <label>Producent</label>
+                            <comment>Nazwa firmy farmaceutycznej</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Producent>
+                        <BLOZ_12 translate="label,comment">
+                            <label>BLOZ_12</label>
+                            <comment>Identyfikator leku</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </BLOZ_12>
+                        <Ilosc translate="label,comment">
+                            <label>Ilosc</label>
+                            <comment>Liczba tabletek, pojemność butelki np. 12szt., 250ml</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Ilosc>
+                    </fields>
+                </attr_medicines>
+                <attr_grocery translate="label">
+                    <label>Mapping of the attributes for "Grocery" group</label>
+                    <sort_order>110</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <dynamic translate="label,comment">
+                            <label>Additional Attributes</label>
+                            <sort_order>100</sort_order>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                            <show_in_default>1</show_in_default>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <frontend_model>ceneoplpro/config_map</frontend_model>
+                        </dynamic>
+                        <Producent translate="label,comment">
+                            <label>Producent</label>
+                            <comment>Producent produktu</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Producent>
+                        <EAN translate="label,comment">
+                            <label>EAN</label>
+                            <comment>Kod paskowy występujący na produktach, opakowaniach</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </EAN>
+                        <Ilosc translate="label,comment">
+                            <label>Ilosc</label>
+                            <comment>Ilość w opakowaniu np. 12szt., 2kg</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Ilosc>
+                    </fields>
+                </attr_grocery>
+                <attr_clothes translate="label">
+                    <label>Mapping of the attributes for "Clothes" group</label>
+                    <sort_order>120</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <dynamic translate="label,comment">
+                            <label>Additional Attributes</label>
+                            <sort_order>100</sort_order>
+                            <show_in_store>1</show_in_store>
+                            <show_in_website>1</show_in_website>
+                            <show_in_default>1</show_in_default>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <frontend_model>ceneoplpro/config_map</frontend_model>
+                        </dynamic>
+                        <Producent translate="label,comment">
+                            <label>Producent</label>
+                            <comment>Producent danego produktu</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Producent>
+                        <Model translate="label,comment">
+                            <label>Model</label>
+                            <comment>Model produktu</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Model>
+                        <EAN translate="label,comment">
+                            <label>EAN</label>
+                            <comment>Kod paskowy występujący na produktach, opakowaniach</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </EAN>
+                        <Kolor translate="label,comment">
+                            <label>Kolor</label>
+                            <comment>Kolor dominujący, w przypadku gdy produkt występuje w kilku wariantach kolorystycznych powinna się pojawić oddzielna oferta dla każdego koloru (pole wymagane)</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Kolor>
+                        <Rozmiar translate="label,comment">
+                            <label>Rozmiar</label>
+                            <comment>Rozmiar, w przypadku gdy produkt jest dostępny w różnych rozmiarach poszczególne wartości powinny zostać oddzielone średnikiem np. 'S;L;XL' (pole wymagane)</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Rozmiar>
+                        <Kod_producenta translate="label,comment">
+                            <label>Kod_producenta</label>
+                            <comment>Kod nadawany przez producenta</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>6</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Kod_producenta>
+                        <Sezon translate="label,comment">
+                            <label>Sezon</label>
+                            <comment>Sezon np. 'wiosna/lato'</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Sezon>
+                        <Fason translate="label,comment">
+                            <label>Fason</label>
+                            <comment>Rozumiana jako fason pojedyncza wartość np. 'rurki', 'dzwony', 'szerokie', 'szmizjerka'</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </Fason>
+                        <ProductSetId translate="label,comment">
+                            <label>ProductSetId</label>
+                            <comment>Oznaczenie zestawu</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ceneoplpro/attribute</source_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </ProductSetId>
+                    </fields>
+                </attr_clothes>
+            </groups>
+        </ceneoplpro>
+    </sections>
+</config>

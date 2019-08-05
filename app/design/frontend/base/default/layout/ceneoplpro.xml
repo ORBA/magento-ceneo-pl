@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+    <checkout_onepage_success>
+        <reference name="checkout.success">
+            <block type="ceneoplpro/cpacheckout" name="ceneoplpro.cpacheckout" template="ceneoplpro/cpacheckout.phtml" />
+        </reference>
+    </checkout_onepage_success>
+</layout>

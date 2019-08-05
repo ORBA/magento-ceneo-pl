@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <catalog>
+            <children>
+                <ceneoplpro translate="title" module="ceneoplpro">
+                    <title>ORBA | Ceneo.pl Pro</title>
+                    <children>
+                        <offer_index translate="title" module="ceneoplpro">
+                            <title>Offer</title>
+                            <action>adminhtml/ceneoplpro_offer/index</action>
+                        </offer_index>
+                        <mapping_index translate="title" module="ceneoplpro">
+                            <title>Mass Categories Mapping</title>
+                            <action>adminhtml/ceneoplpro_mapping/index</action>
+                        </mapping_index>
+                        <offer_urls translate="title" module="ceneoplpro">
+                            <title>Feed URLs</title>
+                            <action>adminhtml/ceneoplpro_offer/urls</action>
+                        </offer_urls>
+                        <category_refresh translate="title" module="ceneoplpro">
+                            <title>Refresh Categories</title>
+                            <action>adminhtml/ceneoplpro_category/refresh</action>
+                        </category_refresh>
+                        <offer_regenerate translate="title" module="ceneoplpro">
+                            <title>Refresh Feeds Cache</title>
+                            <action>adminhtml/ceneoplpro_offer/regenerate</action>
+                        </offer_regenerate>
+                        <config translate="title" module="ceneoplpro">
+                            <title>Configuration</title>
+                            <action>adminhtml/system_config/edit/section/ceneoplpro</action>
+                        </config>
+                    </children>
+                    <sort_order>290</sort_order>
+                </ceneoplpro>
+            </children>
+        </catalog>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <catalog>
+                        <children>
+                            <ceneoplpro translate="title" module="ceneoplpro">
+                                <title>ORBA | Ceneo.pl Pro</title>
+                                <sort_order>290</sort_order>
+                                <children>
+                                    <offer_index translate="title" module="ceneoplpro">
+                                        <title>Offer</title>
+                                        <sort_order>10</sort_order>
+                                    </offer_index>
+                                    <mapping_index translate="title" module="ceneoplpro">
+                                        <title>Mass Categories Mapping</title>
+                                        <sort_order>20</sort_order>
+                                    </mapping_index>
+                                    <offer_urls translate="title" module="ceneoplpro">
+                                        <title>Feed URLs</title>
+                                        <sort_order>30</sort_order>
+                                    </offer_urls>
+                                    <category_refresh translate="title" module="ceneoplpro">
+                                        <title>Refresh Categories</title>
+                                        <sort_order>40</sort_order>
+                                    </category_refresh>
+                                    <offer_regenerate translate="title" module="ceneoplpro">
+                                        <title>Refresh Feeds Cache</title>
+                                        <sort_order>50</sort_order>
+                                    </offer_regenerate>
+                                </children>
+                            </ceneoplpro>
+                        </children>
+                    </catalog>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

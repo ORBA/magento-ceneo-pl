@@ -1,0 +1,57 @@
+<div class="content-header">
+   <h3><?php echo $this->getHeaderText() ?></h3>
+   <p class="content-buttons form-buttons">
+        <?php echo $this->getBackButtonHtml(); ?>
+        <?php echo $this->getResetButtonHtml(); ?>
+        <?php if ($this->getEditMode()): ?>
+        <?php echo $this->getDeleteButtonHtml(); ?>
+        <?php endif ?>
+        <?php if ($this->getEditMode()): ?>
+        <?php echo $this->getSaveAsButtonHtml(); ?>
+        <?php endif ?>
+        <?php echo $this->getSaveButtonHtml(); ?>
+    </p>
+</div>
+<form action="<?php echo $this->getSaveUrl() ?>" method="post" id="mapping_edit_form">
+    <?php echo $this->getBlockHtml('formkey')?>
+    <div class="no-display">
+        <input type="hidden" id="change_flag_element" name="_change_type_flag" value="" />
+        <input type="hidden" id="save_as_flag" name="_save_as_flag" value="<?php echo $this->getSaveAsFlag() ?>" />
+    </div>
+    <?php echo $this->getForm() ?>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+    var mappingForm = new varienForm('mapping_edit_form');
+    var mappingControl = {
+        init: function () {
+            if ($('convert_button_back')) {
+                $('convert_button_back').hide();
+            }
+        },
+        save: function() {
+            if (this.typeChange) {
+                $('change_flag_element').value = '1';
+            }
+            mappingForm.submit();
+            return false;
+        },
+        saveAs: function() {
+            if (this.typeChange) {
+                $('change_flag_element').value = '1';
+            }
+
+            $('save_as_flag').value = '1';
+
+            mappingForm.submit();
+            return false;
+        },
+        deleteMapping: function() {
+            if(window.confirm("<?php echo Mage::helper('ceneoplpro')->__('Are you sure that you want to delete this mapping?') ?>")) {
+                window.location.href = '<?php echo $this->getDeleteUrl() ?>';
+            }
+        }
+    };
+    mappingControl.init();
+//]]>
+</script>
