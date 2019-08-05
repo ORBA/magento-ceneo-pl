@@ -9,7 +9,7 @@ Mappings can be run manually, but the Cron Magento also runs them on a daily bas
 
 As a result You get publicly accessible dynamically generated XML files (one for each store view) that you can add to your accounts at Ceneo.pl.
 
-It's possible to ues generated XML files in other comparison shopping engines e.g. Skapiec.pl, Radar.pl, Okazje.info.pl, Kupujemy.pl, Smartbay.pl and Cenuj.pl.
+It's possible to use generated XML files in other comparison shopping engines e.g. Skapiec.pl, Radar.pl, Okazje.info.pl, Kupujemy.pl, Smartbay.pl and Cenuj.pl.
 
 Features:
 * Ability to map all attributes of Ceneo.pl (from all product groups) with Magento attributes
