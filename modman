@@ -1,0 +1,8 @@
+app/code/community/Orba/Ceneoplpro/                         app/code/community/Orba/Ceneoplpro
+app/design/adminhtml/default/default/template/ceneoplpro/   app/design/adminhtml/default/default/template/ceneoplpro
+app/design/adminhtml/default/default/layout/ceneoplpro.xml  app/design/adminhtml/default/default/layout/ceneoplpro.xml
+app/design/frontend/base/default/template/ceneoplpro/       app/design/frontend/base/default/template/ceneoplpro
+app/design/frontend/base/default/layout/ceneoplpro.xml      app/design/frontend/base/default/layout/ceneoplpro.xml
+app/etc/modules/Orba_Ceneoplpro.xml                         app/etc/modules/Orba_Ceneoplpro.xml
+app/locale/pl_PL/Orba_Ceneoplpro.csv                        app/locale/pl_PL/Orba_Ceneoplpro.csv
+lib/Ceneoplpro/                                             lib/Ceneoplpro
